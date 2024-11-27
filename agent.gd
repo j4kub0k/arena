@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var ship = get_parent()
-@onready var debug_path = ship.get_node('../debug_path')
+@onready var ship : Ship = get_parent()
+@onready var debug_path : Line2D = ship.get_node('../debug_path')
 
 var ticks = 0
 var spin = 0
