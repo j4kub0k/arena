@@ -62,5 +62,7 @@ func on_game_over():
                 for x in scores:
                     sum += (x - avg) ** 2
                 var s = sqrt(sum / (num_games - 1))     # sample standard deviation
+                print('standard deviation: %.1f' % s)
                 var m = t * s / sqrt(num_games)
-                print('~95%% confidence interval for win rate: [%.1f, %.1f]' % [avg - m, avg + m])
+                print('~95%% confidence interval for average score: [%.1f, %.1f]' %
+                        [avg - m, avg + m])
